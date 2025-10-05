@@ -8,6 +8,42 @@ A full-stack face authentication system that:
 
 ---
 
+## ⚙️ Prerequisites
+
+Before running the project, make sure you have the following installed on your system:
+
+### 🧠 Dlib for Windows (Python 3.x)
+➡️ [Download and Installation Guide](https://github.com/z-mahmud22/Dlib_Windows_Python3.x)
+
+Dlib is required for face recognition and image processing functionalities.
+
+---
+
+### 🧱 CMake (Build Tool)
+➡️ [Download CMake](https://cmake.org/download/)
+
+CMake is needed to compile native libraries such as Dlib during setup.
+
+---
+
+### 🟩 Node.js (Frontend)
+➡️ [Download Node.js](https://nodejs.org/en/download)
+
+Node.js is required to run and build the React frontend.
+
+---
+
+### 🐘 PostgreSQL (Database)
+➡️ [Download PostgreSQL](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)
+
+PostgreSQL is used to store authentication logs (name, image paths, date, time).
+
+---
+
+> 💡 **Tip:**  
+> After installing the prerequisites, ensure you’ve added each tool (CMake, Node.js, PostgreSQL) to your system PATH for global access.
+
+
 ## 📂 Project Structure
 
 ```bash

@@ -46,9 +46,10 @@ A full-stack face authentication system that:
 ```
 
 ### RUN BACKEND 
-
-    uvicorn main:app --reload   
-
+```bash
+    cd backend/src
+    uvicorn app:app --reload   
+```
 
 ## All the endpoints
 | Endpoint        | Method | Description                  |

@@ -1,0 +1,29 @@
+# Node modules
+frontend/node_modules/
+
+# Python cache
+backend/src/__pycache__/
+
+# Virtual environment
+venv/
+
+# Local data
+data/
+
+# VSCode settings
+.vscode/
+
+# Environment files
+.env
+backend/.env
+frontend/.env
+
+# Logs
+*.log
+
+# Python bytecode
+*.pyc
+
+# System files
+Thumbs.db
+.DS_Store

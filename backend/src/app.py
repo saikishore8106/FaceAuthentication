@@ -26,8 +26,8 @@ app.add_middleware(
 
 
 # Folder to save captured images
-CAPTURED_FOLDER = r"C:\Users\saich\Downloads\YTV\Projects\data\captured"
-KNOWN_FACES_FOLDER = r"C:\Users\saich\Downloads\YTV\Projects\data\known_faces"
+CAPTURED_FOLDER = r"C:\Users\saich\OneDrive\Desktop\face_auth_proj\FaceAuthentication\data\captured"
+KNOWN_FACES_FOLDER = r"C:\Users\saich\OneDrive\Desktop\face_auth_proj\FaceAuthentication\data\known_faces"
 KNOWN_FACE_NAMES = ["chandra", "Kishore"]
 
 # Mount static folder at URL /captured

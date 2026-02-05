@@ -26,9 +26,9 @@ app.add_middleware(
 
 
 # Folder to save captured images
-CAPTURED_FOLDER = r"C:\Users\saich\OneDrive\Desktop\face_auth_proj\FaceAuthentication\data\captured"
-KNOWN_FACES_FOLDER = r"C:\Users\saich\OneDrive\Desktop\face_auth_proj\FaceAuthentication\data\known_faces"
-KNOWN_FACE_NAMES = ["chandra", "Kishore"]
+CAPTURED_FOLDER = "/Users/saichandrareddy/Projects/faceauthentication/FaceAuthentication/backend/captured"
+KNOWN_FACES_FOLDER = "/Users/saichandrareddy/Projects/faceauthentication/FaceAuthentication/backend/known_faces"
+KNOWN_FACE_NAMES = ["chandra"]
 
 # Mount static folder at URL /captured
 app.mount("/captured", StaticFiles(directory=CAPTURED_FOLDER), name="captured")
@@ -47,6 +47,7 @@ async def authenticate_endpoint():
     try:
         # Capture an image
         captured_image_path, error = capture_image(save_folder=CAPTURED_FOLDER)
+        print("I am in here")
         if error:
             return JSONResponse(status_code=500, content={"success": False, "error": error})
 
@@ -54,6 +55,7 @@ async def authenticate_endpoint():
             return JSONResponse(status_code=500, content={"success": False, "error": "Failed to read captured image"})
 
         # Run authentication
+        print("I am out here")
         name, e = check_the_auth(captured_image_path, KNOWN_FACES_FOLDER, KNOWN_FACE_NAMES)
 
         # Determine matched auth image path

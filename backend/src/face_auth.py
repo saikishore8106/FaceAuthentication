@@ -18,9 +18,11 @@ def check_the_auth(captured_image, folder_path, known_face_names):
     known_encodings = []
 
     print(folder_path, len( os.listdir(folder_path)))
-    
+    print(captured_image)
     unknown_image = face_recognition.load_image_file(captured_image)
     unknown_encoding = face_recognition.face_encodings(unknown_image)[0]
+
+    print("i AM CHECKING")
 
     try:
         # Loop over all images in folder

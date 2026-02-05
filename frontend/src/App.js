@@ -13,13 +13,16 @@ function App() {
       const response = await fetch("http://127.0.0.1:8000/authenticate");
       const data = await response.json();
 
+      console.log(data)
+
       if (data.captured_image) {
-        const capturedFilename = data.captured_image.split("\\").pop();
+        const capturedFilename = data.captured_image.split("/").pop();
+        console.log(capturedFilename)
         setCapturedImage(`http://127.0.0.1:8000/captured/${capturedFilename}`);
       }
 
       if (data.auth_image) {
-        const authFilename = data.auth_image.split("\\").pop();
+        const authFilename = data.auth_image.split("/").pop();
         setAuthImage(`http://127.0.0.1:8000/known_faces/${authFilename}`);
       } else {
         setAuthImage(null);

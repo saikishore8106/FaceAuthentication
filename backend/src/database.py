@@ -5,7 +5,7 @@ from datetime import datetime
 
 # PostgreSQL connection details
 DB_USER = "postgres"
-DB_PASSWORD = "1234"
+DB_PASSWORD = "root"
 DB_HOST = "localhost"
 DB_PORT = "5432"
 DB_NAME = "authticationdb"
